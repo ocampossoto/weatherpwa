@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install typescript && npm ci && npm run build
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WEATHERAPPPROJ2021 }}'
           channelId: live
-          projectId: weatherappproj2021
+          projectId: ocampossoto-weather
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
