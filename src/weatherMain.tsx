@@ -47,7 +47,7 @@ export default function WeatherMain(props : any){
     }
     const proccessPosition=async(position: any)=>{
       //Get location from coordinates
-      const temp = `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${props.APIkey}&units=imperial`;
+      const temp = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${props.APIkey}&units=imperial`;
       const response = await fetch(temp);
       const body = await response.json();
       if(body.cod === 200){
@@ -78,7 +78,7 @@ export default function WeatherMain(props : any){
                     
                     {data !== null? <div style={{marginTop: "1vh"}}>
                         <Typography>{data.name}</Typography>
-                        <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt={data.weather[0].main}/>
+                        <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt={data.weather[0].main}/>
                         <Typography>{data.weather[0].main}</Typography>
                         <Typography>{Math.round(data.main.temp)}&#176;</Typography>
                         <Typography>High / Low: {Math.round(data.main.temp_max)}&#176; / {Math.round(data.main.temp_min)} &#176;</Typography>
