@@ -65,14 +65,14 @@ export default function WeatherMain(props : any){
     }
     return <div className={classes.root} >
          <Grid container spacing={3} alignItems="center" justify="center">
-           <Grid item className={classes.field} sm={12} xs={12} lg={3} md={4}>
+           <Grid item className={classes.field} sm={12} xs={12} lg={4} md={4}>
              <TextField fullWidth label="Enter City, State, Country Code" value={text} onChange={(e: any)=> {setText(e.target.value); typing(e.target.value);}} 
                      InputProps={{
                       endAdornment: <MyLocationIcon onClick={()=>{getLocation()}}/>
                       }}
                     />
            </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={12} lg={12} md={12}>
                 <div className={classes.paper}>
                      
                     
