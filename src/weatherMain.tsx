@@ -30,7 +30,7 @@ export default function WeatherMain(props : any){
     let [text, setText] = React.useState<string>("");
     const getWeatherData = async (value: any) =>{
         //call weather api to get data by city, state, country code 
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${props.APIkey}&units=imperial`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${props.APIkey}&units=imperial`);
         //Convert response nto something we can use. 
         const body = await response.json();
         //If it's valid save the data. 
