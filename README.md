@@ -1,4 +1,4 @@
-[![Deploy to Firebase Hosting on PR](https://github.com/ocampossoto/weatherpwa/actions/workflows/firebase-hosting-pull-request.yml/badge.svg)](https://github.com/ocampossoto/weatherpwa/actions/workflows/firebase-hosting-pull-request.yml)
+[![Deploy to Firebase Hosting on merge](https://github.com/ocampossoto/weatherpwa/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/ocampossoto/weatherpwa/actions/workflows/firebase-hosting-merge.yml)
 
 # weatherpwa
 
