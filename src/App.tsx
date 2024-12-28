@@ -1,8 +1,8 @@
 import {
   CircularProgress,
   CssBaseline,
-  Grid,
-  ThemeProvider,
+  Grid2 as Grid,
+  Box,
 } from "@mui/material";
 import { getAnalytics } from "firebase/analytics";
 import { FirebaseOptions, initializeApp } from "firebase/app";
@@ -24,7 +24,7 @@ function App() {
   getAnalytics(app);
 
   return (
-    <ThemeProvider theme>
+    <Box pt={8}>
       <CssBaseline />
       <Grid
         container
@@ -48,7 +48,7 @@ function App() {
           <WeatherMain />
         </Suspense>
       </Grid>
-    </ThemeProvider>
+    </Box>
   );
 }
 
